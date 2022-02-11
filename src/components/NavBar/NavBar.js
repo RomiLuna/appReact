@@ -1,17 +1,18 @@
 import './NavBar.css'
-const NavBar =()=>{
+import CartWidget from '../CartWidget/CartWidget.js'
+const NavBar =({title})=>{
     return(
       <nav className='NavBar'>
           <div>
-              <p>
-                  Reflexología LUNA
-              </p>
-              <img className='Logo' src={'./images/logo.png'} alt='logo'/>
-          </div>
-        <button className='Option'>Inicio</button>
-        <button className='Option'>Servicios</button>
-        <button className='Option'>Promociones</button>
-        <button className='Option'>Login</button>
+              <h3>{title}</h3>
+           </div>
+        <div className='Categories'>
+            <button className='Option'>Inicio</button>
+            <button className='Option'>Servicios</button>
+            <button className='Option'>Promociones</button>
+            <button className='Option'>Login</button>
+        </div>
+        <CartWidget/>
       </nav>
     )
   }
