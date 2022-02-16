@@ -1,7 +1,7 @@
 import { useEffect,useState } from "react";
 //import ItemCount from "../ItemCount/ItemCount";
 
- import { getProducts } from "../../asynmock"; 
+import { getProducts } from "../../asynmock"; 
 import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer=({greeting='Hello'})=>{
