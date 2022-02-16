@@ -29,5 +29,4 @@ class ItemCount extends Component{
             </>
         )
     }
-}
-export default ItemCount
+} 
