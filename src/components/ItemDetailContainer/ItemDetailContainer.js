@@ -3,17 +3,17 @@ import { getProduct } from "../../asynmock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer=()=>{
-const [products,setProducts]=useState([])
+const [product,setProducts]=useState([])
       useEffect(()=>{
-        getProduct().then(products =>{
-             setProducts(products)
+        getProduct().then(product =>{
+             setProducts(product)
         })
      } ,[])  
     
    
     return(
         <div >            
-                <ItemDetail products={products}/>
+                <ItemDetail product={product}/>
         </div>
     )
 }
