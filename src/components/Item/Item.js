@@ -1,3 +1,5 @@
+import './Item.css'
+import { Link } from 'react-router-dom'
 const Item=({product})=>{
     return(
         <article className="CardItem" >
@@ -18,6 +20,7 @@ const Item=({product})=>{
                 </p>
             </section>
             <footer className="ItemFooter">
+                <link to={`/detail/${product.id}`}>Ver detalle</link>
             </footer>
 
         </article>

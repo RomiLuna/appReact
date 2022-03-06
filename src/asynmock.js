@@ -3,17 +3,38 @@ const products=[
     {   id:2, name:'Torta de chocolate',price:'$500',category:'dulce',img:'https://unsplash.com/photos/B1KuLO3NoRg',desc:'Torta deliciosa'},
     {  id:3, name:'Pizza',price:'$500',category:'salado',img:'https://unsplash.com/photos/B1KuLO3NoRg',desc:'Puedes elegir los ingredientes de la pizza' }
     ]
+     
     
-   export const getProducts=()=>{
-        return new Promise((resolve)=>{
-            setTimeout(()=>{resolve(products)},3000)
-        })
     
+    const categories = [
+        {id: 'celular', description: 'Celular'},
+        {id: 'tablet', description: 'Tablet'},
+        {id: 'notebook', description: 'Notebook'}
+    ]
+    
+    export const getProducts = (idCategory) => {
+        return new Promise ((resolve) => {
+            const productsToResolve = idCategory ? products.filter(item => item.category === idCategory) : products
+            setTimeout(() => {
+                resolve(productsToResolve);
+            },500);
+        });
     }
-
-    export const getProduct=()=>{
-        return new Promise((resolve)=>{
-            setTimeout(()=>{resolve(products[0])},2000)
-        })
     
+    export const getProduct = (id) => {
+        return new Promise((resolve) => {
+            const prod = products.find(p => p.id === parseInt(id))
+            setTimeout(() => {
+                resolve(prod)
+            }, 500)
+        })
     }
+    
+    export const getCategories = () => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(categories)
+            }, 500)
+        })
+    }
+    

@@ -1,3 +1,5 @@
+import './CartWidget.css'
+
 const CartWidget =()=>{
     return (
     <img className='Logo' src={'./images/logo.png'} alt='logo'/>

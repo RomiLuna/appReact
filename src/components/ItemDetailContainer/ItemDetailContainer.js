@@ -1,11 +1,13 @@
+import './ItemDetailContainer.css'
 import { useEffect,useState } from "react";
 import { getProduct } from "../../asynmock"; 
 import ItemDetail from "../ItemDetail/ItemDetail";
-
+import { useParams } from "react-router-dom";
 const ItemDetailContainer=()=>{
 const [product,setProducts]=useState([])
+const {productId} = useParams()
       useEffect(()=>{
-        getProduct().then(product =>{
+        getProduct(productId).then(product =>{
              setProducts(product)
         })
      } ,[])  

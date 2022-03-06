@@ -1,3 +1,5 @@
+
+import './ItemDetail.css'
 const ItemDetail=({product})=>{
     return(
         <article className="CardItem" >
