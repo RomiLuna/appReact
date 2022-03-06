@@ -7,9 +7,9 @@ const products=[
     
     
     const categories = [
-        {id: 'celular', description: 'Celular'},
-        {id: 'tablet', description: 'Tablet'},
-        {id: 'notebook', description: 'Notebook'}
+        {id: 'salado', description: 'Comida'},
+        {id: 'dulce', description: 'Tortas'}
+        
     ]
     
     export const getProducts = (idCategory) => {

@@ -8,8 +8,8 @@ const NavBar =({title})=>{
            </div>
         <div className='Categories'>
             <button className='Option'>Inicio</button>
-            <button className='Option'>Servicios</button>
-            <button className='Option'>Promociones</button>
+            <button className='Option'>Dulce</button>
+            <button className='Option'>Salado</button>
             <button className='Option'>Login</button>
         </div>
         <CartWidget/>
